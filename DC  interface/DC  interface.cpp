@@ -101,7 +101,10 @@ public:
 
 int main()
 {
-    std::vector<Fly*> Subject(4);
+
+
+    std::vector<Fly*> Subject;
+
     Subject.push_back(new DarkSide);
     Subject.push_back(new Marsianin);
     Subject.push_back(new Cyborg);
@@ -121,6 +124,13 @@ int main()
        i->hero();
       std::cout << "\n\n";
    }
-    
+   std::vector<Villain*>Villains;
+   Villains.push_back(new DarkSide);
+   for (auto& i : Villains) {
+       i->get_name();
+       i->villain();
+       std::cout << "\n\n";
+   }
+
 }
 
